@@ -25,6 +25,8 @@ class Animal:
         pass
 
 class ToSave:    
-    # salva no DB
+    def __init__(self, object_) -> None: 
+        self.save(object_)
+
     def save(self, object):
         pass
