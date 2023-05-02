@@ -5,28 +5,39 @@ Crie interfaces que são específicas. Clientes não devem depender de interface
 from abc import ABC, abstractmethod
 
 class IJanela(ABC):
-
+    @abstractmethod
+    def maximizar(self):
+        pass
+    
+    @abstractmethod
+    def minimizar(self):
+        pass
+    
+    @abstractmethod
+    def mostrar_menu(self):
+        pass
+        
     @abstractmethod
     def fechar(self):
-        raise NotImplementedError
+        pass
 
 class JanelaTamanhoFixo(IJanela):
 
     def mostrar_menu(self):
-        pass
+        raise NotImplementedError
     
     def fechar(self):
-        pass
+        raise NotImplementedError
 
 class JanelaSemMenu(IJanela):
     
     def maximizar(self):
-        pass
+        raise NotImplementedError
 
     def minimizar(self):
-        pass
+        raise NotImplementedError
 
     def fechar(self):
-        pass
+        raise NotImplementedError
 
 
